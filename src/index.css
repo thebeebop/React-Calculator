@@ -6,14 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
-  background-color: rgb(255, 255, 255);
-  font-family: 'Poppins', sans-serif;
-
-}
-
 
 /* Desktop Version */
 @media screen and (min-width: 450px) {
@@ -136,12 +128,20 @@ body {
 /* Mobile Version */
 @media screen and (max-width: 450px) {
 
+  body {
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+  }
+
   #root {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
   }
 
   header {
