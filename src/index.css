@@ -1,13 +1,227 @@
-body {
+*, 
+:before,
+:after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif;
+
 }
+
+
+/* Desktop Version */
+@media screen and (min-width: 450px) {
+
+  body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(10, 0, 45);
+  }
+
+  #root {
+    position: relative;
+    top: 60px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 30px;
+    background-color: rgb(107, 40, 251);
+    color: white;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+  }
+  
+  .calculator-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 800px;
+    min-width: 600px;
+    padding: 50px;
+    background-color: rgb(234, 234, 234);
+    border-radius: 15px;
+  }
+  
+  .display-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 30%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  
+  .display {
+    display:inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow-wrap: anywhere;
+  }
+  
+  .buttons-container {
+    min-height: 70%;
+    display: grid;
+    margin-top: 15px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .button {
+    background-color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 100;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .button:hover {
+    background-color: rgb(208, 208, 208);
+  }
+  
+  .operator {
+    /* background-color: rgb(106, 104, 104); */
+    font-size: 35px;
+  }
+  
+  #equals {
+    grid-column: 4 / 5;
+    grid-row: 2 / 6;
+    background-color: rgb(150, 105, 247)
+  }
+
+  #equals:hover {
+    background-color: rgb(108, 81, 167)
+
+  }
+  
+  #cancel {
+    grid-row: 5 / 6;
+    grid-column: 3 / 4;
+    background-color: rgb(160, 160, 160)
+  }
+
+  #cancel:hover {
+    background-color: rgb(107, 107, 107)
+
+  }
+  
+}
+
+
+/* Mobile Version */
+@media screen and (max-width: 450px) {
+
+  #root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 30px;
+    background-color: rgb(107, 40, 251);
+    color: white;
+  }
+
+  .calculator-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+  }
+  
+  .display-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 30%;
+    background-color: rgb(0, 0, 0);
+  
+  }
+  
+  .display {
+    display:inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow-wrap: anywhere;
+  }
+  
+  .buttons-container {
+    min-height: 70%;
+    display: grid;
+    background-color: rgb(21, 4, 36);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    border-bottom: 2px solid black
+  
+  }
+  
+  .button {
+    background-color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 100;
+    border: none;
+  }
+  
+  .operator {
+    font-size: 35px;
+  }
+  
+  #equals {
+    grid-column: 4 / 5;
+    grid-row: 2 / 6;
+    background-color: rgb(150, 105, 247)
+  }
+  
+  #cancel {
+    grid-row: 5 / 6;
+    grid-column: 3 / 4;
+    background-color: rgb(160, 160, 160);
+    
+  }
+  
+}
+
+
+
+
