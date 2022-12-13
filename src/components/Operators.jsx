@@ -35,14 +35,14 @@ const Operators = ({
     backgroundColor: "rgb(160, 160, 160)",
     fontSize: 35,
     border: 0,
-    fontWeight: 200,
+    fontWeight: 600,
   };
 
   const pressed = {
     backgroundColor: "rgb(89, 88, 88)",
     fontSize: 35,
     border: 0,
-    fontWeight: 200,
+    fontWeight: 600,
   };
 
   const handleOperator = (e) => {

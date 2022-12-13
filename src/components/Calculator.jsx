@@ -3,6 +3,8 @@ import Buttons from "./Buttons";
 import { useState } from "react";
 import { useEffect } from "react";
 
+// Font is far too thin on deployed version
+// Deploved version display font size does not auto adjust to display.length
 const Calculator = () => {
   const [operator, setOperator] = useState("");
   const [firstNumber, setFirstNumber] = useState(0);
